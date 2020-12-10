@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Components/Home';
 import Header from './Components/Header';
+import Nike from './Components/Nike';
+
 
 export default function App() {
   return(
@@ -10,9 +12,9 @@ export default function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />}>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path="/nike" element={<Nike />} />
 
-          </Route>
         </Routes>
       </BrowserRouter>
     </React.Fragment>

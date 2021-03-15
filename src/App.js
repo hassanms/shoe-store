@@ -1,22 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './Components/Home';
-import Header from './Components/Header';
-import Nike from './Components/Nike';
+import Home from './components/Home';
+import Header from './components/Header';
+import Nike from './components/Nike';
+import Adidas from './components/Adidas';
 
 
 export default function App() {
   return(
     <React.Fragment>
-      <BrowserRouter>
+      <Router>
         <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path="/nike" element={<Nike />} />
-
+          <Route exact path="/adidas" element={<Adidas />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </React.Fragment>
   )
 }
